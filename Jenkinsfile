@@ -1,24 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Build1') {
+        stage ('Build') {
             steps {
-                echo "******** coming from build1 stage"
-            }
-        }
-        stage ('groovystage') {
-            steps {
-                script {
-                     //Define a variablename ="value"
-                    def course = "Jenkins1"
-                    // if condition
-                    if (course== "Jenkins")
-                    println("Thanks for enrolling Jenkins")
-                    else
-                    println("Please register jenkins")
-                //println("Thank you for installing ${course} course")
+                retry(3) {
+                echo "Print a message"
+                error "this will give some error"
                 }
-                              
+                echo "********* Retried 3 times **********"
             }
         }
     }
