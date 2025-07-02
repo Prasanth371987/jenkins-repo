@@ -5,6 +5,7 @@ pipeline {
     {
     steps {
         echo "Executing in Master"
+        echo "New changes done"
     }
     }
     }
