@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+        stages{
+        stage('Build')
+    {
+    steps {
+        echo "Git Hub Repository"
+        sh "hostname -i"
+    }
+    }
+    stage('otherBuild') {
+        agent {
+          label 'java-slave'
+        }
+    steps {     
+    echo "Executing in Slave"
+        sh "hostname -i"
+    }
+}
+    }
+}
