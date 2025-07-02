@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                      //Define a variablename ="value"
-                    def course = "Jenkins"
+                    def course = "Jenkins1"
                     // if condition
                     if (course== "Jenkins")
                     println("Thanks for enrolling Jenkins")
