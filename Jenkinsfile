@@ -11,9 +11,14 @@ pipeline {
                 script {
                      //Define a variablename ="value"
                     def course = "Jenkins"
-                println("Thank you for installing ${course} course")
-                }               
-              
+                    // if condition
+                    if (course== "Jenkins")
+                    println("Thanks for enrolling Jenkins")
+                    else
+                    println("Please register jenkins")
+                //println("Thank you for installing ${course} course")
+                }
+                              
             }
         }
     }
